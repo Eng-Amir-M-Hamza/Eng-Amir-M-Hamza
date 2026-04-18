@@ -1,9 +1,18 @@
 body {
 margin:0;
 font-family:Arial;
-background: linear-gradient(135deg, #000814, #001d3d);
+background: radial-gradient(circle at top, #000814, #000);
 color:white;
-scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* BACKGROUND GLOW */
+.bg {
+position:fixed;
+width:100%;
+height:100%;
+background: radial-gradient(circle at center, #001d3d, #000);
+z-index:-1;
 }
 
 /* NAV */
@@ -15,15 +24,14 @@ display:flex;
 justify-content:center;
 gap:25px;
 padding:15px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(12px);
 z-index:1000;
 }
 
 nav a {
 color:#00eaff;
 text-decoration:none;
-font-weight:bold;
 }
 
 /* HERO */
@@ -37,16 +45,18 @@ text-align:center;
 }
 
 .glow {
+font-size:48px;
 color:#00eaff;
-text-shadow:0 0 25px #00eaff;
+text-shadow:0 0 30px #00eaff;
 }
 
+/* TYPING EFFECT */
 .typing {
 border-right:2px solid #00eaff;
 white-space:nowrap;
 overflow:hidden;
 width:0;
-animation: typing 3s steps(60,end) forwards;
+animation: typing 3s steps(70,end) forwards;
 }
 
 @keyframes typing {
@@ -54,14 +64,38 @@ from {width:0}
 to {width:100%}
 }
 
-.sub {
-opacity:0.7;
-margin-top:10px;
+/* BUTTONS */
+.buttons {
+margin-top:20px;
+}
+
+.btn {
+background:#00eaff;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+margin:5px;
+}
+
+.btn-outline {
+background:transparent;
+border:1px solid #00eaff;
+color:#00eaff;
+padding:10px 20px;
+cursor:pointer;
 }
 
 /* SECTIONS */
 section {
-padding:100px 10%;
+padding:120px 10%;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+section.show {
+opacity:1;
+transform:translateY(0);
 }
 
 /* GRID */
@@ -76,22 +110,17 @@ gap:20px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(0,234,255,0.2);
 padding:20px;
-border-radius:12px;
-transition:0.3s;
+border-radius:14px;
+transition:0.4s;
 }
 
 .card:hover {
-transform:translateY(-8px);
-box-shadow:0 0 30px #00eaff33;
+transform:scale(1.03);
+box-shadow:0 0 40px #00eaff33;
 }
 
 img {
 width:100%;
 border-radius:10px;
 margin-top:10px;
-}
-
-/* LISTS */
-ul {
-line-height:1.8;
 }
