@@ -2,62 +2,176 @@
 <html>
 <head>
 <title>Eng Amir Portfolio</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body {
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #050505, #000814);
+    color:white;
+}
+
+/* HERO */
+.hero {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.glow {
+    color:#00eaff;
+    text-shadow:0 0 10px #00eaff, 0 0 30px #00eaff;
+}
+
+.typing {
+    border-right:2px solid #00eaff;
+    white-space:nowrap;
+    overflow:hidden;
+    width:0;
+    animation: typing 3s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from { width:0 }
+    to { width:100% }
+}
+
+/* SECTIONS */
+section {
+    padding:60px 10%;
+}
+
+h2 {
+    color:#00eaff;
+    text-shadow:0 0 10px #00eaff;
+}
+
+/* CARDS */
+.card {
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(0,234,255,0.2);
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    box-shadow:0 0 20px #00eaff33;
+}
+
+img {
+    width:100%;
+    border-radius:8px;
+    margin-top:10px;
+}
+
+/* BUTTON */
+button {
+    margin-top:10px;
+    padding:10px 15px;
+    background:#00eaff;
+    border:none;
+    cursor:pointer;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
-<h1>Eng. Amir Mohamed</h1>
-<p>BIM Automation Engineer | Revit Add-ins | Dynamo Expert</p>
-<p>Worked on Microsoft Data Centers & Mega Projects</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+<h1 class="glow">Eng. Amir Mohamed</h1>
+<p class="typing">BIM Automation Engineer | Revit Add-ins | Dynamo | Navis Coordination</p>
+</div>
 
+<!-- ADD-INS -->
 <section>
 <h2>🔥 Revit Add-ins</h2>
 
 <div class="card">
+<p>
+I build Revit Add-ins using C# to automate workflows, reduce manual work,
+and improve shop drawing production speed.
+</p>
+
 <img src="images/addins/toolbox.png">
-<h3>ToolBox Add-in</h3>
-<p>Automates shop drawings and Revit workflows using C#.</p>
-<button onclick="openLink('YOUR_YOUTUBE')">Watch Demo</button>
+
+<button onclick="openLink('YOUR_VIDEO')">Watch Demo</button>
 <button onclick="openLink('YOUR_DRIVE')">Download</button>
 </div>
-
 </section>
 
+<!-- DYNAMO -->
 <section>
-<h2>⚙️ Dynamo Scripts</h2>
+<h2>⚙️ Dynamo Automation</h2>
 
 <div class="card">
+<p>
+Developed Dynamo scripts to automate routing, schedules, and data extraction
+for faster and more accurate BIM workflows.
+</p>
+
 <img src="images/dynamo/script1.png">
-<h3>Shop Drawing Automation</h3>
-<p>Speeds up cable routing, schedules, and modeling.</p>
+
 <button onclick="openLink('YOUR_VIDEO')">Watch Demo</button>
 </div>
-
 </section>
 
+<!-- PROJECTS -->
 <section>
 <h2>🏢 Projects</h2>
 
 <div class="card">
 <h3>Microsoft Data Centers (USA)</h3>
-<p>LOD 400 modeling, clash resolution, panel schedules.</p>
+<p>
+LOD 400 modeling, clash-free coordination, panel schedules, cable sizing.
+Delivered execution-ready BIM models.
+</p>
+
 <img src="images/projects/dc1.png">
 </div>
 
 <div class="card">
 <h3>Magdy Yacoub Hospital</h3>
-<p>Electrical design for X-ray rooms and coordination.</p>
+<p>
+Electrical systems for X-ray rooms, Revit families, coordination.
+</p>
+
 <img src="images/projects/hospital.png">
+</div>
+
+<div class="card">
+<h3>KSA Projects</h3>
+<p>
+Electrical modeling, cable tray systems, low current coordination.
+</p>
 </div>
 
 </section>
 
+<!-- CURRENT -->
+<section>
+<h2>🧭 Current Work</h2>
+
+<div class="card">
+<p>
+Currently working on BIM coordination using Navisworks,
+ensuring clash-free models and smooth execution.
+</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
 <section>
 <h2>📞 Contact</h2>
-<button onclick="openLink('https://linkedin.com/in/Eng-Amir-Mohamed')">
+<button onclick="openLink('https://www.linkedin.com/in/Eng-Amir-Mohamed')">
 LinkedIn
 </button>
 </section>
