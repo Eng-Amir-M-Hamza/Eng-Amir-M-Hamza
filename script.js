@@ -1,1 +1,1 @@
-console.log("Cinematic Portfolio Loaded");
+console.log("Apple-level portfolio loaded");
