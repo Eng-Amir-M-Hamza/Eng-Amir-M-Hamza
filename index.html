@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Eng Amir Portfolio</title>
+<title>Amir Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
 <a href="#home">Home</a>
 <a href="#projects">Projects</a>
@@ -21,7 +20,7 @@
 <h1 class="glow">Eng. Amir Mohamed Hamza</h1>
 
 <p class="typing">
-Electrical BIM / VDC Engineer | Revit Add-ins | Dynamo | Navisworks Coordination
+BIM / VDC Engineer | Revit Add-ins | Dynamo | Navisworks Coordination
 </p>
 
 <p class="sub">
@@ -35,21 +34,21 @@ Electrical BIM / VDC Engineer | Revit Add-ins | Dynamo | Navisworks Coordination
 
 <div class="grid">
 
-<div class="card" onclick="openModal('ms')">
+<div class="card">
 <h3>Microsoft Data Centers (USA)</h3>
-<p>LOD 400 BIM execution models, clash-free coordination.</p>
+<p>LOD 400 BIM execution, clash-free coordination.</p>
 <img src="images/projects/dc.png">
 </div>
 
-<div class="card" onclick="openModal('hp')">
+<div class="card">
 <h3>Magdy Yacoub Hospital</h3>
-<p>Electrical X-ray rooms design & coordination.</p>
+<p>Electrical X-ray room design & coordination.</p>
 <img src="images/projects/hospital.png">
 </div>
 
 <div class="card">
 <h3>KSA Projects</h3>
-<p>Yacht Club & Mega infrastructure electrical systems.</p>
+<p>Yacht Club & Mega infrastructure works.</p>
 </div>
 
 </div>
@@ -60,15 +59,15 @@ Electrical BIM / VDC Engineer | Revit Add-ins | Dynamo | Navisworks Coordination
 <h2>🔥 Revit Add-ins</h2>
 
 <div class="card">
-<h3>C# Revit Automation Tools</h3>
-
 <p>
-Built custom Add-ins to automate:
-<br>• Shop drawings
-<br>• Schedules
-<br>• Cable calculations
-<br>• Revit workflows
+Custom C# tools for automating Revit workflows:
 </p>
+
+<ul>
+<li>Shop drawings automation</li>
+<li>Schedules & BOQ generation</li>
+<li>Model optimization</li>
+</ul>
 
 <img src="images/addins/toolbox.png">
 </div>
@@ -80,10 +79,7 @@ Built custom Add-ins to automate:
 
 <div class="card">
 <p>
-Developed scripts for:
-<br>• Routing automation
-<br>• Data extraction
-<br>• Shop drawing acceleration
+Scripts for routing, scheduling, and BIM data extraction.
 </p>
 
 <img src="images/dynamo/script1.png">
@@ -97,7 +93,7 @@ Developed scripts for:
 <div class="card">
 <p>
 Clash detection, resolution, and multi-discipline coordination
-for zero-clash construction models.
+for construction-ready models.
 </p>
 </div>
 </section>
@@ -114,16 +110,5 @@ for zero-clash construction models.
 
 </section>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-<div class="modal-content">
-<span onclick="closeModal()" class="close">X</span>
-<div id="modal-body"></div>
-</div>
-</div>
-
-<script src="script.js"></script>
-
 </body>
 </html>
-
