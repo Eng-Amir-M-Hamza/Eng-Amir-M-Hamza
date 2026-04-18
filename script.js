@@ -1,1 +1,1 @@
-console.log("Recruiter Portfolio Loaded");
+console.log("Recruiter Killer v2 Loaded");
