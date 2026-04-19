@@ -1,20 +1,27 @@
-// ===== THEME TOGGLE =====
-const toggleBtn = document.getElementById("themeToggle");
+document.addEventListener("DOMContentLoaded", () => {
 
-// Load saved mode
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-}
+    const toggleBtn = document.getElementById("themeToggle");
 
-// Toggle on click
-if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+    // Load saved theme
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+    }
 
-        if (document.body.classList.contains("light-mode")) {
-            localStorage.setItem("theme", "light");
-        } else {
-            localStorage.setItem("theme", "dark");
-        }
-    });
+    // Toggle
+    if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            if (document.body.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
+            } else {
+                localStorage.setItem("theme", "dark");
+            }
+        });
+    }
+});
+
+// open project function (you already use it)
+function openProject(page) {
+    window.location.href = page;
 }
